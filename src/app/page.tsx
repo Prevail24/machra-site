@@ -6,21 +6,25 @@ const features = [
     eyebrow: "Overview",
     title: "Everything in view.",
     copy: "CPU, memory, storage, network, battery and thermal state brought together in one clear system overview.",
+    image: "/screenshots/machra-overview.png",
   },
   {
     eyebrow: "System detail",
     title: "Go deeper when you need to.",
     copy: "Dedicated views make system information approachable without turning your Mac into a wall of numbers.",
+    image: "/screenshots/machra-cpu.png",
   },
   {
     eyebrow: "Desktop widgets",
     title: "Your data. Your desktop.",
     copy: "Keep the system readings you care about nearby with Machra's floating desktop widgets.",
+    image: "/screenshots/machra-widgets.png",
   },
   {
     eyebrow: "Rules & alerts",
     title: "Know when something changes.",
     copy: "Create rules around supported system metrics and receive notifications when conditions you care about occur.",
+    image: "/screenshots/machra-rules-alerts.png",
   },
 ];
 
@@ -125,64 +129,15 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="appWindow">
-          <div className="windowBar">
-            <div className="trafficLights">
-              <span />
-              <span />
-              <span />
-            </div>
-
-            <div className="windowTitle">
-              MACHRA
-            </div>
-
-            <div className="windowStatus">
-              <span />
-              Live
-            </div>
-          </div>
-
-          <div className="windowContent">
-            <div className="previewSidebar">
-              <div className="previewBrand">M</div>
-
-              <div className="previewNav active" />
-              <div className="previewNav" />
-              <div className="previewNav" />
-              <div className="previewNav" />
-              <div className="previewNav" />
-              <div className="previewNav short" />
-            </div>
-
-            <div className="previewMain">
-              <div className="previewHeading">
-                <span>System overview</span>
-                <strong>Everything in view</strong>
-              </div>
-
-              <div className="previewGrid">
-                {["CPU", "Memory", "Disks", "Network", "Battery", "Thermal"].map(
-                  (item, index) => (
-                    <div className="previewMetric" key={item}>
-                      <span>{item}</span>
-
-                      <strong>
-                        {index === 5 ? "Nominal" : index === 4 ? "100%" : "—"}
-                      </strong>
-
-                      <div className="previewChart">
-                        <div style={{ width: `${44 + index * 7}%` }} />
-                      </div>
-                    </div>
-                  ),
-                )}
-              </div>
-
-              <div className="realScreenshotLabel">
-                Real Machra screenshot coming soon
-              </div>
-            </div>
+        <div className="appWindow realMachraWindow">
+          <div className="realAppScreenshot">
+            <Image
+              src="/screenshots/machra-overview.png"
+              alt="Machra system overview showing CPU, memory, disks, network, battery and thermal state"
+              width={1302}
+              height={823}
+              priority
+            />
           </div>
         </div>
       </section>
@@ -206,7 +161,17 @@ export default function Home() {
               </div>
 
               <div className="screenshotPlaceholder">
-                <span>Machra screenshot coming soon</span>
+                {feature.image ? (
+                  <Image
+                    src={feature.image}
+                    alt={`${feature.title} — Machra`}
+                    width={1302}
+                    height={823}
+                    className="featureScreenshot"
+                  />
+                ) : (
+                  <span>Machra screenshot coming soon</span>
+                )}
               </div>
 
               <h3>{feature.title}</h3>
