@@ -254,13 +254,13 @@ export default function Home() {
         <div className="footerLinks">
           <Link href="/support">Support</Link>
           <Link href="/privacy">Privacy</Link>
-          <a
-            href="https://github.com/Prevail24"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub
-          </a>
+        <a
+          href="https://github.com/Prevail24/machra-site"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
         </div>
 
         <span>© 2026 Prevail</span>
