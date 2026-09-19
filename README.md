@@ -95,7 +95,7 @@ machra-site/
 
 ## Local Development
 
-Clone the repository:
+If you would like to learn hhow this website was made and how it works; Clone the repository:
 
 ```bash
 git clone https://github.com/Prevail24/machra-site.git
@@ -139,34 +139,6 @@ npm start
 ```
 
 The current site is statically prerendered where possible for fast delivery and simple deployment.
-
----
-
-## Deployment
-
-The production site is deployed through **Cloudflare**.
-
-The primary domain is:
-
-```text
-https://machra.app
-```
-
-The canonical domain is:
-
-```text
-machra.app
-```
-
-Requests to:
-
-```text
-www.machra.app
-```
-
-are redirected to the root domain.
-
-Deployment is tied to this GitHub repository so updates pushed to the production branch can be automatically deployed.
 
 ---
 
@@ -285,8 +257,6 @@ The product emphasizes:
 
 ---
 
-## Brand
-
 ### Machra
 
 **System intelligence for your Mac.**
@@ -299,6 +269,6 @@ GitHub: [https://github.com/Prevail24/machra-site](https://github.com/Prevail24/
 
 ## Copyright
 
-© 2026 Prevail Labs
+© 2026 Prevail Industries
 
 All rights reserved.
