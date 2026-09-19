@@ -263,7 +263,7 @@ export default function Home() {
         </a>
         </div>
 
-        <span>© 2026 Prevail</span>
+        <span>© 2026 Prevail Industries </span>
       </footer>
     </main>
   );
