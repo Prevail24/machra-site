@@ -75,6 +75,16 @@ a {
   color: white;
 }
 
+.navLinks .navDownload {
+  color: var(--violet-bright);
+}
+
+.nav a:focus-visible {
+  outline: 2px solid var(--violet-bright);
+  outline-offset: 6px;
+  border-radius: 4px;
+}
+
 .hero {
   min-height: 760px;
   display: grid;
@@ -764,4 +774,17 @@ a {
     grid-template-columns: 1fr;
   }
 
+}
+
+@media (max-width: 420px) {
+  .nav {
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-block: 22px;
+  }
+
+  .navLinks {
+    width: 100%;
+    justify-content: space-between;
+  }
 }

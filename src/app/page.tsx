@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import SiteNav from "@/components/SiteNav";
 
 const features = [
   {
@@ -31,24 +32,7 @@ const features = [
 export default function Home() {
   return (
     <main>
-      <nav className="nav shell">
-        <Link href="/" className="brand">
-          <Image
-            src="/images/machra-logo.png"
-            width={42}
-            height={42}
-            alt="Machra"
-            className="brandIcon"
-          />
-          <span>MACHRA</span>
-        </Link>
-
-        <div className="navLinks">
-          <a href="#features">Features</a>
-          <Link href="/support">Support</Link>
-          <Link href="/privacy">Privacy</Link>
-        </div>
-      </nav>
+      <SiteNav />
 
       <section className="hero shell">
         <div className="heroCopy">
